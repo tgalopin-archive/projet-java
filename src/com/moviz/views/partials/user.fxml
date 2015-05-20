@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox alignment="TOP_RIGHT" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.moviz.controller.HeaderController">
+    <children>
+        <HBox alignment="CENTER_LEFT" minHeight="0.0" styleClass="header" fx:id="menuBox">
+            <children>
+                <ImageView fitHeight="20.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../img/moviz.png" />
+                    </image>
+                    <HBox.margin>
+                        <Insets left="10.0" />
+                    </HBox.margin>
+                </ImageView>
+
+                <Pane prefHeight="0.0" prefWidth="728.0" HBox.hgrow="ALWAYS" />
+
+                <Button fx:id="userButton" contentDisplay="RIGHT" graphicTextGap="10.0" mnemonicParsing="false"
+                    styleClass="header-avatar">
+                    <graphic>
+                        <ImageView fx:id="avatarDisplay" fitHeight="30.0" fitWidth="30.0"
+                            pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../../data/img/users/default.png" />
+                            </image>
+                        </ImageView>
+                    </graphic>
+                </Button>
+            </children>
+
+            <padding>
+                <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+            </padding>
+        </HBox>
+
+        <ChoiceBox fx:id="userChoiceBox" maxHeight="0" maxWidth="155.0" minHeight="0" minWidth="155.0"
+            opacity="0" prefHeight="0" prefWidth="155.0" VBox.vgrow="ALWAYS" />
+    </children>
+</VBox>
